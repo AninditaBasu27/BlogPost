@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('./source/register.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* padding-top: 120 px; */
+}
+
+/* Container / Card */
+.container {
+  margin-top: 120px;
+  margin-right: 500px;
+  width: min(420px, 90%);
+  background: rgba(255, 255, 255, 0.12);
+  /* backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%); */
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  padding: 35px 30px 40px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* Title & Description */
+h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 15px;
+  color: #e5e7eb;
+  margin-bottom: 25px;
+}
+
+/* Input Fields */
+.input-field,
+.password-field {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select option {
+  color: #000; /* normal text color */
+  background-color: #fff; /* white background for contrast */
+}
+
+/* Style for disabled options (like “Admin”) */
+select option:disabled {
+  color: #888; /* make it visible but still look disabled */
+  background-color: #f9f9f9;
+}
+
+/* Improve dropdown visibility on dark background */
+select {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+}
+
+input::placeholder {
+  color: #f3f4f6;
+}
+
+select {
+  color: #f3f4f6;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input:focus,
+select:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.35);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Icons Inside Inputs */
+.right-icon i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f9fafb;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+  border: 2px solid #8b5cf6;
+}
+
+/* Footer Text */
+.back {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.back a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back a:hover {
+  text-decoration: underline;
+  color: #a78bfa;
+}
+
+/* 🌐 Responsive Design */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 60px;
+    margin-right: 0;
+    width: 80%;
+    padding: 30px 25px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    margin: 30px auto;
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    margin: 20px auto;
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  input,
+  select {
+    padding: 10px 40px 10px 12px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .back {
+    font-size: 13px;
+  }
+}
+
+.search-input {
+  background-color: rgba(255, 255, 255, 0.9); /* brighter background */
+  color: #000; /* black text for visibility */
+  border: 2px solid #8b5cf6; /* subtle purple border */
+  border-radius: 25px;
+  padding: 8px 15px;
+  width: 220px;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #555; /* darker placeholder text */
+}
+
+.search-input:focus {
+  border-color: #06b6d4; /* cyan glow when focused */
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+  background-color: #fff;
+}
+
+#btn0{
+  color:rgb(67, 165, 189);
+}

@@ -1,0 +1,119 @@
+/* Page background */
+.edit-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e9f1f7, #cfe8ff);
+  padding: 100px 20px 60px; /* top padding for navbar space */
+}
+
+/* Main form wrapper */
+.edit-wrapper {
+  background: #fff;
+  width: 100%;
+  max-width: 750px;  /* wider for better layout */
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.edit-wrapper h2 {
+  text-align: center;
+  color: #222;
+  font-size: 28px;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+}
+
+/* Form labels */
+form label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+/* Inputs, dropdown, textarea, file upload */
+form input[type="text"],
+form textarea,
+form select,
+form input[type="file"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Focus effect */
+form input[type="text"]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #6a8eff;
+  box-shadow: 0 0 6px rgba(106, 142, 255, 0.4);
+  background: #fff;
+}
+
+/* Textarea sizing */
+form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* Current image */
+.current-image {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.current-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Update button */
+.btn-update {
+  width: 100%;
+  background: linear-gradient(135deg, #6a8eff, #a76eff);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 28px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-update:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edit-wrapper {
+    padding: 30px 25px;
+    max-width: 95%;
+  }
+
+  .edit-wrapper h2 {
+    font-size: 24px;
+  }
+
+  form textarea {
+    min-height: 150px;
+  }
+}

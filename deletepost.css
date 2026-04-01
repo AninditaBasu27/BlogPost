@@ -1,0 +1,72 @@
+/* deletepost.css */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Popup Container */
+.popup {
+  padding: 25px 45px;
+  border-radius: 16px;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.4s ease, floatUp 1.2s ease-in-out infinite alternate;
+  transition: opacity 0.5s ease;
+}
+
+/* Variants */
+.popup.success {
+  background: #e6ffee;
+  color: #155724;
+  border: 2px solid #b6f0c2;
+  box-shadow: 0 0 15px rgba(91, 255, 142, 0.3);
+}
+
+.popup.error {
+  background: #ffe6e6;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+  box-shadow: 0 0 15px rgba(255, 112, 112, 0.3);
+}
+
+.popup.info {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 2px solid #bee5eb;
+  box-shadow: 0 0 15px rgba(103, 217, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-6px);
+  }
+}
+
+/* Optional: fade-out effect before redirect */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}

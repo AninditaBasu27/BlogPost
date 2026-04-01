@@ -1,0 +1,25 @@
+.search-bar form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 8px 14px;
+  border-radius: 25px;
+  border: 1px solid #da0b0b;
+  outline: 2px solid transparent;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #0e0e0e;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
